@@ -6,7 +6,15 @@
 		
 
 		<Feature Id="ProductFeature" Title="SetupProject1" Level="1">
-			<ComponentGroupRef Id="Product.Generated" />
+
+			<ComponentGroupRef Id="ClassLibrary1.Binaries" />
+			<ComponentGroupRef Id="ClassLibrary1.Content" />
+			<ComponentGroupRef Id="ClassLibrary1.Satellites" />
+
+			<ComponentGroupRef Id="ConsoleApp1.Binaries" />
+			<ComponentGroupRef Id="ConsoleApp1.Content" />
+			<ComponentGroupRef Id="ConsoleApp1.Satellites" />
+
 		</Feature>
 	</Package>
 
