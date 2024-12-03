@@ -9,9 +9,11 @@ The `main` branch contains a very simple setup program that harvests `ClassLibra
 
 ## Migrating to WiX v4...
 
-When attempting to migrate this simple project to WiX v4, the migration report does not generate any errors:
-
-![image](https://github.com/user-attachments/assets/6532e714-f4ff-4ec3-9619-99f3ce2282fd)
+1. Right click on the wix project and choose **Upgrade to WiX 4...**:
+  - ![image](https://github.com/user-attachments/assets/ffcb3594-2c7d-4ff8-a5ca-98ea97f95f2a)
+2. Should see that it generated no errors:
+  - ![image](https://github.com/user-attachments/assets/6532e714-f4ff-4ec3-9619-99f3ce2282fd)
+3. Scan logs for any errors or warnings...
 
 Here is the log that was generated from the migration process:
 
@@ -30,8 +32,9 @@ Here is the log that was generated from the migration process:
 [12/03/2024 12:58:55.144]: ========== Import complete:  0 errors, 0 warnings
 ```
 
-> See `migration-bug` branch for the results of the migration.
+4. Build the new project!
+  - > **ERROR**:  The identifier 'WixComponentGroup:Product.Generated' could not be found. Ensure you have typed the reference correctly and that all the necessary inputs are provided to the linker.
 
-However, when building the project, I get the following error:
-
-> **The identifier 'WixComponentGroup:Product.Generated' could not be found. Ensure you have typed the reference correctly and that all the necessary inputs are provided to the linker.**
+## Repository  Branches
+* See `migration-bug` branch for the results of the migration.
+* See `migration-fix` branch for the required changes to fix it.
